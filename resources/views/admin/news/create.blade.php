@@ -7,7 +7,7 @@
           <div class="col-md-8 mx-auto">
             <h2>ニュース新規作成</h2>
             <form action="{{ action('Admin\NewsController@create') }}" method="post" enctype="multipart/form-data">
-            @if (count($errors) > 0)
+              @if (count($errors) > 0)
                 <ul>
                   @foreach ($errors->all() as $e)
                     <li>{{ $e }}</li>
@@ -30,7 +30,7 @@
                 <label class="col-md-2">画像</label>
                 <div class="col-md-10">
                   <input type="file" class="form-control-file" name="image">
-                </div>
+        　       </div>
               </div>
               {{ csrf_field() }}
               <input type="submit" class="btn btn-primary" value="更新">
