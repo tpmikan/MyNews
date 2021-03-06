@@ -32,6 +32,22 @@ body {
     .body {
       font-size: 0.8em;
     }
+    .name {
+      width: 100%;
+      position: absolute;
+      .hi {
+        font-size: 1.2em;
+      }
+    }
+    .gender {
+      font-size: 0.8em;
+    }
+    .hobby {
+      font-size: 0.8em;
+    }
+    .introduction {
+      font-size: 0.8em;
+    }
   }  
 }
 
@@ -52,6 +68,18 @@ body {
       img {
         width: 250px;
       }
+    }
+    .name {
+      font-size: 1.2em;
+    }
+    .gender {
+      font-size: 0.8em;
+    }
+    .hobby {
+      font-size: 0.8em;
+    }
+    .introduction {
+      font-size: 0.8em;
     }
   }
 }
