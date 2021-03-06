@@ -2,6 +2,7 @@
 
 @section('content')
   <div class="container">
+    <h2>MyNews</h2> 
     <hr color="#c0c0c0">
     @if (!is_null($headline))
       <div class="row">
