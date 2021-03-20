@@ -17,13 +17,13 @@
           <div class="form-group row">
             <label class="col-md-2" for="title">タイトル</label>
             <div class="col-md-10">
-              <input type="text" class="form-control" name="title" value="{{ $news_form->title }}">
+              <input type="text" class="form-control" name="title" value="{{ $news->title }}">
             </div>
           </div>
           <div class="form-group row">
             <label class="col-md-2" for="body">本文</label>
             <div class="col-md-10">
-              <textarea class="form-control" name="body" rows="20">{{ $news_form->body }}</textarea>
+              <textarea class="form-control" name="body" rows="20">{{ $news->body }}</textarea>
             </div>
           </div>
           <div class="form-group row">
@@ -31,7 +31,7 @@
             <div class="col-md-10">
               <input type="file" class="form-control-file" name="image">
               <div class="form-text text-info">
-                設定中: {{ $news_form->image_path }}
+                設定中: {{ $news->image_path }}
               </div>
               <div class="form-check">
                 <label class="form-check-label">
@@ -42,7 +42,7 @@
           </div>
           <div class="form-group row">
             <div class="col-md-10">
-              <input type="hidden" name="id" value="{{ $news_form->id }}">
+              <input type="hidden" name="id" value="{{ $news->id }}">
               {{ csrf_field() }}
               <input type="submit" class="btn btn-primary" value="更新">
             </div>
@@ -52,8 +52,8 @@
           <div class="col-md-4 mx-auto">
             <h2>編集履歴</h2>
             <ul class="list-group">
-              @if ($news_form->histories != NULL)
-                @foreach ($news_form->histories as $history)
+              @if ($news->histories != NULL)
+                @foreach ($news->histories as $history)
                   <li class="list-group-item">{{ $history->edited_at }}</li>
                 @endforeach
               @endif
