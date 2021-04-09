@@ -20,4 +20,9 @@ class NewsController extends Controller
       }
     return view('news.index', ['headline' => $headline, 'posts' => $posts]);
     }
+    
+    public function apiview()
+    {
+    return view('news.apiview');
+    }    
 }
