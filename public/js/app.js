@@ -49634,10 +49634,27 @@ $(function () {
     $.ajax({
       url: '/api/add',
       type: 'POST',
-      dataType: "json",
+      datatype: 'json',
       data: {
         'title': 'test',
         'body': 'ajax test'
+      }
+    }).done(function () {
+      alert('保存しました');
+    }).fail(function () {
+      alert('エラー');
+    });
+  });
+  $('#add_news_form').click('on', function () {
+    var news_title = $('#news_title').val();
+    var news_body = $('#news_body').val();
+    $.ajax({
+      url: '/api/form',
+      type: 'POST',
+      datatype: 'json',
+      data: {
+        'title': news_title,
+        'body': news_body
       }
     }).done(function () {
       alert('保存しました');

@@ -23,7 +23,7 @@ $(function() {
             console.log(response);
             var row;
             for(var i=0; i<Object.keys(response).length; i++){
-                row = row + "<tr>"
+                row = row + "<tr>";
                 row = row + "<td>"+ response[i].id +"</td>";
                 row = row + "<td>"+ response[i].title +"</td>";
                 row = row + "<td>"+ response[i].body +"</td>";
@@ -35,13 +35,13 @@ $(function() {
         .fail(function() {
             alert('エラー');
         });
-    })
+    });
     
     $('#add_news').click('on',function(){
         $.ajax({
             url: '/api/add',
             type: 'POST',
-            dataType:"json",
+            datatype:'json',
             data: {'title' : 'test', 'body' : 'ajax test'}
         })
         
@@ -51,7 +51,27 @@ $(function() {
         
         .fail(function(){
           alert('エラー');
+        });
+    });
+    
+    $('#add_news_form').click('on',function(){
+        var news_title = $('#news_title').val();
+        var news_body = $('#news_body').val();
+        
+        $.ajax({
+            url: '/api/form',
+            type: 'POST',
+            datatype:'json',
+            data: {'title' : news_title, 'body' : news_body}
         })
+        
+        .done(function(){
+          alert('保存しました');
+        })
+        
+        .fail(function(){
+          alert('エラー');
+        });
     });
  });
 

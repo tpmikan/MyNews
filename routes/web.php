@@ -38,7 +38,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 });
 
 // PHP/Laravel09 task_3.
-Route::get('XXX', 'AAAControlle@bbb');
+// Route::get('XXX', 'AAAControlle@bbb');
 
 
 Auth::routes();

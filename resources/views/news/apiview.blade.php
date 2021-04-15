@@ -36,5 +36,12 @@
             <li>コントローラでデータを取得する方法→<a href='https://readouble.com/laravel/5.5/ja/requests.html'>JSON入力値の取得の項目</a></li>
          </ul>
         <h5>【応用】画面で入力した値をnewsテーブルに保存できるよう改修しましょう</h5>
+        
+        <label>title</label>
+        <input type="text" class="form-control" id='news_title' name="news_title">
+        <label>body</label>
+        <textarea class="form-control" rows="10" id='news_body' name="news_body"></textarea>
+        <button id="add_news_form">保存</button>
+        
      </body>
  </html>
