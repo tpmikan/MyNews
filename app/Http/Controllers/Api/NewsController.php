@@ -12,15 +12,16 @@ class NewsController extends Controller
 {
     public function index(Request $request)
     {
+      \Log::info('ログ出力テスト');
       return News::all()->sortByDesc('updated_at');
     }
     
     public function add(Request $request)
     {
       $news = new News;
-      $news->title = $request->input("title");
+      $news->title = null;
       $news->body = $request->input("body");
-    
+    \Log::info(["Api\NewsController@endex:news"=>$news]);
       $news->save();
     }
     
